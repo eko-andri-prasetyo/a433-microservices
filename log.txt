@@ -1,0 +1,58 @@
+time="2025-12-11T04:20:11+07:00" level=warning msg="D:\\a433-microservices\\docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+ Network a433-microservices_default  Creating
+ Network a433-microservices_default  Created
+ Container item-db  Creating
+ Container item-db  Created
+ Container item-app  Creating
+ Container item-app  Created
+Attaching to item-app, item-db
+item-db  | 2025-12-10T21:20:11.766+0000 I CONTROL  [initandlisten] MongoDB starting : pid=1 port=27017 dbpath=/data/db 64-bit host=5f15aee27d7f
+item-db  | 2025-12-10T21:20:11.766+0000 I CONTROL  [initandlisten] db version v3.6.23
+item-db  | 2025-12-10T21:20:11.766+0000 I CONTROL  [initandlisten] git version: d352e6a4764659e0d0350ce77279de3c1f243e5c
+item-db  | 2025-12-10T21:20:11.766+0000 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.2g  1 Mar 2016
+item-db  | 2025-12-10T21:20:11.766+0000 I CONTROL  [initandlisten] allocator: tcmalloc
+item-db  | 2025-12-10T21:20:11.766+0000 I CONTROL  [initandlisten] modules: none
+item-db  | 2025-12-10T21:20:11.766+0000 I CONTROL  [initandlisten] build environment:
+item-db  | 2025-12-10T21:20:11.766+0000 I CONTROL  [initandlisten]     distmod: ubuntu1604
+item-db  | 2025-12-10T21:20:11.766+0000 I CONTROL  [initandlisten]     distarch: x86_64
+item-db  | 2025-12-10T21:20:11.767+0000 I CONTROL  [initandlisten]     target_arch: x86_64
+item-db  | 2025-12-10T21:20:11.767+0000 I CONTROL  [initandlisten] options: { net: { bindIpAll: true } }
+item-db  | 2025-12-10T21:20:11.767+0000 I -        [initandlisten] Detected data files in /data/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+item-db  | 2025-12-10T21:20:11.767+0000 I STORAGE  [initandlisten] 
+item-db  | 2025-12-10T21:20:11.767+0000 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+item-db  | 2025-12-10T21:20:11.767+0000 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+item-db  | 2025-12-10T21:20:11.767+0000 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3388M,cache_overflow=(file_max=0M),session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),compatibility=(release="3.0",require_max="3.0"),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+item-db  | 2025-12-10T21:20:12.008+0000 I STORAGE  [initandlisten] WiredTiger message [1765401612:8079][1:0x75bf2a1b7a40], txn-recover: Main recovery loop: starting at 1/73216
+item-db  | 2025-12-10T21:20:12.061+0000 I STORAGE  [initandlisten] WiredTiger message [1765401612:61736][1:0x75bf2a1b7a40], txn-recover: Recovering log 1 through 2
+item-db  | 2025-12-10T21:20:12.095+0000 I STORAGE  [initandlisten] WiredTiger message [1765401612:95512][1:0x75bf2a1b7a40], txn-recover: Recovering log 2 through 2
+item-app  | 
+item-app  | > docker-software-delivery@1.0.0 start /app
+item-app  | > node ./bin/www
+item-app  | 
+item-db   | 2025-12-10T21:20:12.123+0000 I STORAGE  [initandlisten] WiredTiger message [1765401612:123912][1:0x75bf2a1b7a40], txn-recover: Set global recovery timestamp: 0
+item-db   | 2025-12-10T21:20:12.138+0000 I CONTROL  [initandlisten] 
+item-db   | 2025-12-10T21:20:12.138+0000 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+item-db   | 2025-12-10T21:20:12.138+0000 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+item-db   | 2025-12-10T21:20:12.138+0000 I CONTROL  [initandlisten] 
+item-db   | 2025-12-10T21:20:12.141+0000 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/db/diagnostic.data'
+item-db   | 2025-12-10T21:20:12.141+0000 I NETWORK  [initandlisten] listening via socket bound to 0.0.0.0
+item-db   | 2025-12-10T21:20:12.141+0000 I NETWORK  [initandlisten] listening via socket bound to /tmp/mongodb-27017.sock
+item-db   | 2025-12-10T21:20:12.141+0000 I NETWORK  [initandlisten] waiting for connections on port 27017
+item-app  | NODE_ENV: production
+item-db   | 2025-12-10T21:20:12.305+0000 I NETWORK  [listener] connection accepted from 172.18.0.3:55762 #1 (1 connection now open)
+item-db   | 2025-12-10T21:20:12.309+0000 I NETWORK  [conn1] received client metadata from 172.18.0.3:55762 conn1: { driver: { name: "nodejs", version: "2.2.36" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "6.6.87.2-microsoft-standard-WSL2" }, platform: "Node.js v14.21.3, LE, mongodb-core: 2.1.20" }
+item-app  | Connected to database
+item-app  | [0mGET / [36m304 [0m75.127 ms - -[0m
+item-app  | [0mGET /javascripts/dist/dist.min.js [36m304 [0m0.787 ms - -[0m
+item-app  | [0mGET /stylesheets/style.css [32m200 [0m11.556 ms - 519[0m
+item-app  | [0mGET /api [32m200 [0m4.895 ms - 57[0m
+item-app  | [0mGET / [36m304 [0m0.585 ms - -[0m
+item-app  | [0mGET /stylesheets/style.css [36m304 [0m1.217 ms - -[0m
+item-app  | [0mGET /javascripts/dist/dist.min.js [36m304 [0m0.556 ms - -[0m
+item-app  | [0mGET /api [36m304 [0m1.517 ms - -[0m
+Gracefully Stopping... press Ctrl+C again to force
+ Container item-app  Stopping
+ Container item-app  Stopped
+ Container item-db  Stopping
+ Container item-db  Stopped
+

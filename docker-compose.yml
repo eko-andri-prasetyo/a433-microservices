@@ -1,0 +1,27 @@
+version: "3.8"  # Menggunakan Docker Compose versi 2+ (3.8 lebih baru)
+
+services:
+  # Service untuk database MongoDB
+  item-db:
+    image: mongo:3                     # Menggunakan image mongo:3 dari Docker Hub
+    container_name: item-db            # Nama container di dalam network
+    restart: always                    # Restart policy (saran penilaian)
+    volumes:
+      - app-db:/data/db                # Volume bernama app-db dengan target /data/db
+
+  # Service untuk aplikasi Node.js / Express (item-app)
+  item-app:
+    image: ekoandriprasetyo/item-app:v1  # Image yang telah dipush ke Docker Hub
+    container_name: item-app                     # Nama container di dalam network
+    restart: always                              # Restart policy (saran penilaian)
+    depends_on:
+      - item-db                                  # Pastikan item-db sudah jalan terlebih dahulu
+    ports:
+      - "80:8080"                                # Mapping: host port 80 -> container port 8080
+    environment:
+      - NODE_ENV=production                      # Menjamin mode production
+      - DB_HOST=item-db                          # Host MongoDB sesuai nama service
+
+volumes:
+  # Volume bernama app-db untuk menyimpan data database
+  app-db:

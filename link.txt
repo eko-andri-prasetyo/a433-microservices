@@ -1,1 +1,1 @@
-https://hub.docker.com/r/ekoandriprasetyo/item-app
+https://github.com/users/eko-andri-prasetyo/packages/container/package/item-app

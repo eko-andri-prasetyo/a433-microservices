@@ -11,7 +11,7 @@ services:
 
   # Service untuk aplikasi Node.js / Express (item-app)
   item-app:
-    image: ekoandriprasetyo/item-app:v1  # Image yang telah dipush ke Docker Hub
+    image: ghcr.io/eko-andri-prasetyo/item-app:v1  # Wajib pakai GHCR di sini
     container_name: item-app                     # Nama container di dalam network
     restart: always                              # Restart policy (saran penilaian)
     depends_on:
